@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-y: scroll;
+}
+
+header {
+  background-color: rgba(34, 62, 87, 0.8);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+.login-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background-color: #3e8e41;
+}
+
+.background-image {
+  background-image: url('./images/SKCT-College-Campus-14.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: rgba(34, 62, 87, 0.8);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  clear: both;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-container p {
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 10px;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-media-links a {
+  margin-right: 20px;
+  font-size: 24px;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.social-media-links a:hover {
+  color: #ccc;
+}
+
+.follow-us {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  margin-right: 10px;
+}
