@@ -1,0 +1,45 @@
+/* ProfileIcon.css */
+.profile-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profile-avatar {
+  position: relative;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #007bff; /* Optional: Adds a border to the avatar */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: left;
+  z-index: 1000;
+  min-width: 150px; /* Ensures the dropdown is wide enough */
+}
+
+.dropdown-menu p {
+  margin: 0 0 10px 0;
+}
+
+.logout-link {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logout-link:hover {
+  color: #0056b3;
+}

@@ -1,0 +1,90 @@
+/* Base Styles */
+.features-page {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4; /* Light background for better contrast */
+}
+
+.features-header {
+  margin-bottom: 30px;
+}
+
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature {
+  background: #ffffff; /* White background for feature cards */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(33% - 40px);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+  background: #f8f9fa;
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  width: 60px; /* Consistent size for feature icons */
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.feature h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.back-button-container {
+  margin-top: 30px;
+}
+
+.back-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .feature {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .feature {
+    width: calc(100% - 40px);
+  }
+}
