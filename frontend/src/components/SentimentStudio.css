@@ -1,0 +1,542 @@
+.sentiment-studio-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.sentiment-empty-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 24px;
+  text-align: center;
+  border: 1px dashed var(--border-medium);
+}
+
+.empty-seal {
+  font-size: 3.2rem;
+  margin-bottom: 12px;
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.sentiment-empty-panel h3 {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.sentiment-empty-panel p {
+  color: var(--text-secondary);
+  max-width: 440px;
+  font-size: 0.92rem;
+  margin-bottom: 20px;
+}
+
+.empty-features-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.empty-features-list span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--maple-crimson);
+  background: var(--maple-light);
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(192, 57, 43, 0.2);
+}
+
+/* Polarity Executive Card */
+.polarity-executive-card {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-panel) 100%);
+}
+
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.sentiment-tag {
+  font-size: 1.15rem;
+  font-weight: 800;
+  padding: 7px 18px;
+  border-radius: 999px;
+  border: 1px solid;
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.hanko-tone-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  padding: 6px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.hanko-tone-badge .kanji-accent {
+  background: var(--maple-light);
+  color: var(--maple-crimson);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+}
+
+/* Circular Gauge + Readouts */
+.polarity-center-display {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.circular-gauge-wrapper {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.circular-gauge-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.gauge-bg {
+  fill: none;
+  stroke: var(--bg-panel);
+  stroke-width: 8;
+}
+
+.gauge-fill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  transition: stroke-dashoffset 1s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.4s ease;
+}
+
+.gauge-text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge-pct {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.gauge-sub {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.polarity-metric-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.metric-box {
+  background: var(--bg-surface);
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metric-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* Delivery Telemetry Grid */
+.delivery-telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.telemetry-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+}
+
+.telemetry-icon {
+  font-size: 1.8rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-subtle);
+}
+
+.telemetry-icon.maple { background: var(--maple-light); }
+.telemetry-icon.amber { background: rgba(234, 88, 12, 0.12); }
+.telemetry-icon.matcha { background: var(--matcha-light); }
+.telemetry-icon.ginkgo { background: var(--ginkgo-light); }
+
+.telemetry-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.telemetry-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.telemetry-main {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.telemetry-main small {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.telemetry-sub {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* Emotion Radar Card */
+.emotion-radar-card {
+  padding: 22px 24px;
+}
+
+.emotion-card-header .title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.emotion-card-header h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.emotion-bars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px 28px;
+}
+
+.emotion-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bar-label-group {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.bar-label-group strong {
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.bar-track {
+  height: 10px;
+  background: var(--bg-panel);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.fill-joy { background: linear-gradient(90deg, #15803d, #22c55e); }
+.fill-confidence { background: linear-gradient(90deg, var(--maple-crimson), #ef4444); }
+.fill-serenity { background: linear-gradient(90deg, #0f766e, #14b8a6); }
+.fill-energy { background: linear-gradient(90deg, #ea580c, #fb923c); }
+.fill-hesitation { background: linear-gradient(90deg, var(--ginkgo-gold), #fbbf24); }
+.fill-frustration { background: linear-gradient(90deg, #b91c1c, #dc2626); }
+
+/* AI Coach Card */
+.ai-coach-card {
+  padding: 22px 24px;
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-panel) 100%);
+  border: 1px solid var(--border-medium);
+}
+
+.ai-coach-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.coach-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coach-title-group h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.coach-score-pill {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--matcha-green);
+  background: var(--matcha-light);
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(21, 128, 61, 0.25);
+}
+
+.coach-score-pill strong {
+  font-family: var(--font-mono);
+}
+
+.coach-insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.coach-insight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--bg-surface);
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  transition: var(--transition-fast);
+}
+
+.coach-insight-item:hover {
+  border-color: var(--border-medium);
+  transform: translateX(4px);
+}
+
+.insight-icon {
+  font-size: 1.25rem;
+  margin-top: 1px;
+}
+
+.insight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.insight-content strong {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.insight-content p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* AI Summary Card */
+.ai-summary-card {
+  padding: 22px 24px;
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-panel) 100%);
+  border: 1px solid var(--border-medium);
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.summary-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.summary-title-group h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.impact-pill {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--maple-crimson);
+  background: var(--maple-light);
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(225, 29, 72, 0.2);
+}
+
+.summary-synopsis-box {
+  background: var(--bg-surface);
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 14px;
+}
+
+.synopsis-label {
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.synopsis-text {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.55;
+}
+
+.summary-themes-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.themes-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.themes-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.theme-pill {
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: var(--ginkgo-light);
+  color: var(--ginkgo-gold);
+  padding: 3px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(219, 39, 119, 0.2);
+}
+
+.summary-actions-box {
+  background: var(--bg-surface);
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+}
+
+.actions-label {
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.actions-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.actions-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.action-bullet {
+  color: var(--persimmon-amber);
+  font-size: 0.9rem;
+}
+
+/* Action Bar */
+.sentiment-action-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}

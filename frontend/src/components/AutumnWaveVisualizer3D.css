@@ -1,0 +1,132 @@
+.aki-visualizer-wrapper {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 18px 22px 14px 22px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.aki-visualizer-wrapper:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-3d);
+}
+
+.visualizer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.visualizer-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.visualizer-title .kanji-accent {
+  background: var(--maple-light);
+  color: var(--maple-crimson);
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(192, 57, 43, 0.25);
+}
+
+.idle-indicator {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ginkgo-gold);
+  background: var(--ginkgo-light);
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.visualizer-controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mode-toggle-group {
+  display: flex;
+  gap: 6px;
+  background: var(--bg-panel);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+}
+
+.vis-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.vis-toggle-btn:hover {
+  color: var(--maple-crimson);
+}
+
+.vis-toggle-btn.active {
+  background: var(--bg-surface);
+  color: var(--maple-crimson);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Sensitivity Slider */
+.sensitivity-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-panel);
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+}
+
+.sens-slider {
+  width: 70px;
+  height: 4px;
+  accent-color: var(--maple-crimson);
+  cursor: pointer;
+}
+
+.sens-val {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--maple-crimson);
+  font-weight: 700;
+  min-width: 28px;
+}
+
+.aki-canvas {
+  width: 100%;
+  height: 230px;
+  display: block;
+  border-radius: 16px;
+  background: radial-gradient(circle at 50% 50%, var(--bg-secondary) 0%, var(--bg-card) 100%);
+  border: 1px solid var(--border-subtle);
+  cursor: crosshair;
+}

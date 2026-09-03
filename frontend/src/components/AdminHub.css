@@ -1,0 +1,276 @@
+.admin-hub-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 20px 60px 20px;
+}
+
+/* Header */
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.admin-titles h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.admin-titles p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.system-health-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--matcha-green);
+}
+
+/* Telemetry Grid */
+.telemetry-deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.telemetry-stat-box {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.telemetry-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.telemetry-big-val {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.telemetry-big-val small {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.telemetry-delta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.telemetry-delta.green { color: var(--matcha-green); }
+.telemetry-delta.ginkgo { color: var(--ginkgo-gold); }
+
+/* User Directory Card */
+.user-directory-card {
+  padding: 24px;
+}
+
+.directory-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.directory-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.directory-title h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.search-input {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  width: 260px;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.search-input:focus {
+  border-color: var(--ginkgo-gold);
+  box-shadow: 0 0 0 3px var(--ginkgo-glow);
+}
+
+/* Table */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 12px 16px;
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.table-user-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+}
+
+.user-avatar-sm {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--maple-crimson);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.email-cell {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.role-badge {
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.role-badge.admin {
+  background: var(--maple-light);
+  color: var(--maple-crimson);
+  border: 1px solid var(--maple-crimson);
+}
+
+.role-badge.user {
+  background: var(--ginkgo-light);
+  color: var(--ginkgo-gold);
+  border: 1px solid var(--ginkgo-gold);
+}
+
+.role-badge.guest {
+  background: var(--bg-panel);
+  color: var(--text-muted);
+}
+
+.user-table-bio {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.phone-country-cell {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.82rem;
+  color: var(--text-primary);
+}
+
+.phone-country-cell small {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.registered-date-cell {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.status-btn-pill {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition-smooth);
+}
+
+.status-btn-pill.active {
+  color: var(--matcha-green);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.status-btn-pill.suspended {
+  color: var(--maple-crimson);
+  border-color: rgba(235, 107, 86, 0.3);
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.active {
+  background: var(--matcha-green);
+  box-shadow: 0 0 6px var(--matcha-green);
+}
+
+.status-dot.suspended {
+  background: var(--maple-crimson);
+}
+
+.btn-sm {
+  padding: 5px 12px;
+  font-size: 0.78rem;
+}
+

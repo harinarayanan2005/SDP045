@@ -1,0 +1,42 @@
+.aki-toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: var(--bg-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-3d);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  animation: toastSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes toastSlideUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.toast-icon {
+  font-size: 1.2rem;
+}
+
+.toast-success {
+  border-color: var(--matcha-green);
+  background: var(--bg-card);
+}
+
+.toast-warning {
+  border-color: var(--ginkgo-gold);
+}
+
+.toast-info {
+  border-color: var(--maple-crimson);
+}

@@ -1,0 +1,382 @@
+/* =========================================================
+   AuraVoice AI — Sakura Blossom Design System (桜の調べ)
+   Light Theme (Sakura Petal Pearl 桜珠) & Dark Theme (Midnight Sakura 夜桜)
+   ========================================================= */
+
+:root {
+  /* Fonts */
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-kanji: 'Zen Kaku Gothic New', sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Transitions */
+  --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Light Theme: Sakura Blossom Pearl (桜珠) */
+  --bg-primary: #fdf7f9;
+  --bg-secondary: #faebf2;
+  --bg-surface: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-glass: rgba(255, 255, 255, 0.78);
+  --bg-panel: rgba(253, 240, 246, 0.88);
+
+  --border-subtle: rgba(236, 72, 153, 0.14);
+  --border-medium: rgba(225, 29, 72, 0.24);
+  --border-focus: rgba(225, 29, 72, 0.65);
+  --border-gradient: linear-gradient(135deg, rgba(244, 63, 94, 0.35), rgba(236, 72, 153, 0.2));
+
+  --text-primary: #1e1b24;
+  --text-secondary: #564f62;
+  --text-muted: #887d95;
+  --text-subtle: #b8afc4;
+
+  /* Sakura Blossom Palette */
+  --maple-crimson: #e11d48; /* Sakura Deep Rose */
+  --maple-crimson-hover: #be123c;
+  --maple-crimson-glow: rgba(225, 29, 72, 0.28);
+  --maple-light: rgba(244, 63, 94, 0.1);
+
+  --ginkgo-gold: #db2777; /* Blossom Fuchsia Pink */
+  --ginkgo-gold-hover: #be185d;
+  --ginkgo-light: rgba(236, 72, 153, 0.12);
+  --ginkgo-glow: rgba(236, 72, 153, 0.28);
+
+  --persimmon-amber: #f43f5e; /* Rose Blossom */
+  --matcha-green: #059669; /* Spring Bud Green */
+  --matcha-light: rgba(5, 150, 105, 0.12);
+
+  --tsukimi-indigo: #6366f1; /* Lavender Wisteria */
+  --bamboo-teal: #0891b2;
+  --cherry-bark: #831843;
+
+  /* Elevations & Shadows */
+  --shadow-sm: 0 2px 8px rgba(225, 29, 72, 0.06);
+  --shadow-card: 0 12px 36px -8px rgba(225, 29, 72, 0.1), 0 4px 14px -2px rgba(0, 0, 0, 0.03);
+  --shadow-3d: 0 24px 50px -12px rgba(225, 29, 72, 0.16), 0 8px 24px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 32px rgba(244, 63, 94, 0.25);
+
+  --canvas-grid: rgba(225, 29, 72, 0.05);
+}
+
+/* Dark Theme: Midnight Sakura Night (夜桜) */
+[data-theme="dark"] {
+  --bg-primary: #0c0a13;
+  --bg-secondary: #151122;
+  --bg-surface: #1b162b;
+  --bg-card: rgba(27, 22, 43, 0.9);
+  --bg-card-glass: rgba(27, 22, 43, 0.75);
+  --bg-panel: rgba(21, 17, 34, 0.88);
+
+  --border-subtle: rgba(244, 114, 182, 0.16);
+  --border-medium: rgba(251, 113, 133, 0.32);
+  --border-focus: rgba(251, 113, 133, 0.7);
+  --border-gradient: linear-gradient(135deg, rgba(244, 114, 182, 0.35), rgba(251, 113, 133, 0.25));
+
+  --text-primary: #fdf2f8;
+  --text-secondary: #d4b8cc;
+  --text-muted: #9f889c;
+  --text-subtle: #5e4f60;
+
+  --maple-crimson: #fb7185; /* Neon Blossom Rose */
+  --maple-crimson-hover: #f43f5e;
+  --maple-crimson-glow: rgba(251, 113, 133, 0.45);
+  --maple-light: rgba(251, 113, 133, 0.16);
+
+  --ginkgo-gold: #f472b6; /* Luminous Peony Pink */
+  --ginkgo-gold-hover: #ec4899;
+  --ginkgo-light: rgba(244, 114, 182, 0.18);
+  --ginkgo-glow: rgba(244, 114, 182, 0.35);
+
+  --persimmon-amber: #fda4af;
+  --matcha-green: #34d399;
+  --matcha-light: rgba(52, 211, 153, 0.18);
+
+  --tsukimi-indigo: #a78bfa;
+  --bamboo-teal: #2dd4bf;
+  --cherry-bark: #9d174d;
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.55);
+  --shadow-card: 0 16px 40px -10px rgba(0, 0, 0, 0.75), 0 6px 16px rgba(0, 0, 0, 0.5);
+  --shadow-3d: 0 28px 56px -14px rgba(251, 113, 133, 0.28), 0 10px 30px rgba(0, 0, 0, 0.65);
+  --shadow-glow: 0 0 36px rgba(244, 114, 182, 0.32);
+
+  --canvas-grid: rgba(255, 255, 255, 0.035);
+}
+
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.65;
+  min-height: 100vh;
+  transition: background-color 0.45s ease, color 0.45s ease;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ambient Glowing Background Orbs */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(var(--canvas-grid) 1px, transparent 1px),
+    radial-gradient(circle at 90% 10%, var(--ginkgo-light) 0%, transparent 45%),
+    radial-gradient(circle at 10% 85%, var(--maple-light) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(234, 88, 12, 0.04) 0%, transparent 60%);
+  background-size: 28px 28px, 100% 100%, 100% 100%, 100% 100%;
+  z-index: -1;
+  animation: ambientShift 20s ease-in-out infinite alternate;
+}
+
+@keyframes ambientShift {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.03) translate(-10px, 15px); }
+  100% { transform: scale(1) translate(10px, -10px); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--ginkgo-gold), var(--maple-crimson));
+  border-radius: 999px;
+  border: 2px solid var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--maple-crimson);
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+}
+
+.badge-tag {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--maple-light);
+  color: var(--maple-crimson);
+  padding: 3px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(192, 57, 43, 0.22);
+}
+
+.kanji-accent {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Enhanced 3D Glassmorphic Card */
+.aki-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.aki-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-medium), transparent);
+  opacity: 0.6;
+}
+
+.aki-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-3d);
+  transform: translateY(-3px);
+}
+
+/* Japanese Seal Badges */
+.hanko-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--maple-crimson);
+  color: var(--maple-crimson);
+  background: var(--maple-light);
+  box-shadow: 0 2px 10px var(--maple-crimson-glow);
+}
+
+.ginkgo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--ginkgo-gold);
+  color: var(--ginkgo-gold);
+  background: var(--ginkgo-light);
+  box-shadow: 0 2px 10px var(--ginkgo-glow);
+}
+
+.matcha-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--matcha-green);
+  color: var(--matcha-green);
+  background: var(--matcha-light);
+}
+
+/* Button System */
+.aki-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-family: var(--font-main);
+  font-size: 0.94rem;
+  font-weight: 700;
+  padding: 11px 22px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-bounce);
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.aki-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transition: 0.5s ease;
+}
+
+.aki-btn:hover::after {
+  left: 100%;
+}
+
+.aki-btn-primary {
+  background: linear-gradient(135deg, var(--maple-crimson) 0%, var(--persimmon-amber) 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 18px var(--maple-crimson-glow);
+}
+
+.aki-btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px var(--maple-crimson-glow);
+}
+
+.aki-btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.aki-btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.aki-btn-secondary:hover {
+  border-color: var(--ginkgo-gold);
+  color: var(--ginkgo-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.aki-btn-gold {
+  background: linear-gradient(135deg, var(--ginkgo-gold) 0%, var(--persimmon-amber) 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 18px var(--ginkgo-glow);
+}
+
+.aki-btn-gold:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px var(--ginkgo-glow);
+}
+
+/* Dynamic Glowing Indicator */
+.live-pulse {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: var(--maple-crimson);
+  box-shadow: 0 0 0 0 var(--maple-crimson);
+  animation: pulseEffect 1.6s infinite;
+}
+
+@keyframes pulseEffect {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(192, 57, 43, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(192, 57, 43, 0);
+  }
+}
+
+/* Keyframes for Floating Leaves */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(5deg);
+  }
+}
+
+.floating-leaf {
+  animation: floatGentle 5s ease-in-out infinite;
+}

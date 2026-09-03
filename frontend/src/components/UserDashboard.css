@@ -1,0 +1,235 @@
+.dashboard-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 20px 60px 20px;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.header-titles h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.header-titles p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Stats Overview Grid */
+.stats-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.stat-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.stat-icon-wrapper.maple { background: var(--maple-light); }
+.stat-icon-wrapper.ginkgo { background: var(--ginkgo-light); }
+.stat-icon-wrapper.matcha { background: var(--matcha-light); }
+.stat-icon-wrapper.amber { background: rgba(234, 88, 12, 0.12); }
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.stat-number small {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.stat-caption {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+}
+
+/* Sessions List */
+.sessions-list-wrapper {
+  margin-top: 20px;
+}
+
+.sessions-list-header {
+  margin-bottom: 16px;
+}
+
+.sessions-list-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.empty-history-card {
+  text-align: center;
+  padding: 50px 20px;
+  color: var(--text-muted);
+}
+
+.empty-history-card span {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.session-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.session-item-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+}
+
+@media (max-width: 768px) {
+  .session-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.session-item-left {
+  flex: 1;
+}
+
+.session-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.session-polarity-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.badge-pos {
+  background: var(--matcha-light);
+  color: var(--matcha-green);
+  border: 1px solid var(--matcha-green);
+}
+
+.badge-neg {
+  background: var(--maple-light);
+  color: var(--maple-crimson);
+  border: 1px solid var(--maple-crimson);
+}
+
+.badge-neu {
+  background: var(--ginkgo-light);
+  color: var(--ginkgo-gold);
+  border: 1px solid var(--ginkgo-gold);
+}
+
+.session-date-stamp, .session-duration {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.session-item-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.session-text-snippet {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.session-mini-metrics {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--bg-panel);
+  padding: 6px 14px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.session-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aki-btn-del {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.aki-btn-del:hover {
+  background: var(--maple-light);
+  border-color: var(--maple-crimson);
+}
